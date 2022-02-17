@@ -130,12 +130,12 @@ def twist_query(dnstwist_path, domain, unregistered=False):
         return []
     for row in dnstwist_csv:
         standard_row = dict(Fuzzer=row["fuzzer"],
-                            Domain=row["domain-name"],
-                            A=row["dns-a"],
-                            AAAA=row["dns-aaaa"],
-                            MX=row["dns-mx"],
-                            NS=row["dns-ns"],
-                            Country=row["geoip-country"]
+                            Domain=row["domain"],
+                            A=row["dns_a"],
+                            AAAA=row["dns_aaaa"],
+                            MX=row["dns_mx"],
+                            NS=row["dns_ns"],
+                            Country=row["geoip"]
                             )
         rows.append(standard_row)
 
